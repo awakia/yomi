@@ -1,6 +1,6 @@
 Yomi::Application.routes.draw do
   resources :yomi, only: [:index] do
-    get :convert, on: :collection
+    post :convert, on: :collection
   end
 
   # The priority is based upon order of creation:
