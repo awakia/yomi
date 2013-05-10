@@ -5,6 +5,7 @@ class YomiController < ApplicationController
   end
 
   def convert
-    render json: 'あいうえお'.to_json
+    text = params['q']
+    render json: text.to_json
   end
 end
