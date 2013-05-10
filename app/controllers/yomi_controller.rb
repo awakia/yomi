@@ -6,6 +6,8 @@ class YomiController < ApplicationController
 
   def convert
     text = params['q']
-    render json: text.to_json
+    mecab = MeCab::Tagger.new('-Oyomi')
+    yomi = mecab.parse(text)
+    render json: yomi.to_json
   end
 end
