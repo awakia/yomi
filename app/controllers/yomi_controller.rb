@@ -8,6 +8,6 @@ class YomiController < ApplicationController
     text = params['q']
     mecab = MeCab::Tagger.new('-Oyomi')
     yomi = mecab.parse(text)
-    render json: yomi.to_json
+    render json: yomi.rstrip.to_json
   end
 end
