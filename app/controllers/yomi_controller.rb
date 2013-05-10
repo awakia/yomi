@@ -4,7 +4,7 @@ class YomiController < ApplicationController
   def index
   end
 
-  def search
+  def convert
     render json: 'あいうえお'.to_json
   end
 end
