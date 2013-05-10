@@ -1,5 +1,7 @@
 Yomi::Application.routes.draw do
-  resources :yomi, only: [:index]
+  resources :yomi, only: [:index] do
+    get :search, on: :collection
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
