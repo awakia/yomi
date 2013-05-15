@@ -3,6 +3,8 @@ Yomi::Application.routes.draw do
     post :convert, on: :collection
   end
 
+  root to: "yomi#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
